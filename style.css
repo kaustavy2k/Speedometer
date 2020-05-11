@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gauge{
+
+    height: 400px;
+}
+.gauge-wrap{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.speed{
+    margin-top: -80px;
+    font-family: cursive;
+    font-size: 40px;
+}
+.start-stop{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    border-style: none;
+    height: 40px;
+    width: 90px;
+    border-radius: 20px;
+    font-family: fantasy;
+    letter-spacing: 1px;
+    outline: none;
+}
+.start{
+    background-color: #00e500;
+}
+.brake{
+    background-color: #ffff00;
+}
+.stop{
+    background-color: #fc0101;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 0.9;
+    border: 1px solid;
+    transition: 0.1s;
+}
