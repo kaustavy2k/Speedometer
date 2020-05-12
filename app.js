@@ -72,7 +72,6 @@ document.querySelector(".brake").addEventListener("mousedown",()=>{        //TRI
     }
 })                                                        
 document.querySelector(".brake").addEventListener("mouseup",()=>{       //TRIGGERING THE keepcalling FUNCTION ON BRAKE mouseup BUTTON
-   //up=1;
     down=0;
     if(gaugestop==0){
     stopped=1;
