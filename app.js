@@ -56,7 +56,7 @@ document.querySelector(".start").addEventListener("click",()=>{       //TRIGGERI
     keepcalling();
 });
 document.querySelector(".stop").addEventListener("click",()=>{        //SETTING THE VARIABLES TO THE DESIRED VALUE ON STOP BUTTON
-    mousedownstop=1
+    mousedownstop=1;
     gaugestop=1;
    stopped=1;
     startflag=0;
