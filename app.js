@@ -34,6 +34,9 @@ var opts = {         //GUAGE CONFIGURATION
   strokeColor: '#E0E0E0',
   generateGradient: true
 };
+var mousedownstop=0;
+var down=0;
+var gaugestop=0;
 var startflag=0;
 var stopped=1;
 var control=0;
@@ -45,22 +48,39 @@ gauge.maxValue = 300;
 gauge.animationSpeed = 80;
 gauge.set(0);
 document.querySelector(".start").addEventListener("click",()=>{       //TRIGGERING THE keepcalling FUNCTION ON START BUTTON
+    mousedownstop=0;
+     gaugestop=0;
     stopped=0;
     startflag=1;
     control=0;
-    //stopflag=0;
     keepcalling();
 });
 document.querySelector(".stop").addEventListener("click",()=>{        //SETTING THE VARIABLES TO THE DESIRED VALUE ON STOP BUTTON
-    stopped=0;
-   stopped=1
+    mousedownstop=1
+    gaugestop=1;
+   stopped=1;
     startflag=0;
     stopflag=1;
     a=0;
     b=30;
 });
-document.querySelector(".brake").addEventListener("click",applybrakes)       //TRIGGERING THE applybrakes FUNCTION ON BRAKE BUTTON
+document.querySelector(".brake").addEventListener("mousedown",()=>{        //TRIGGERING THE applybrakes FUNCTION ON BRAKE mousedown BUTTON
+    if(mousedownstop!=1){
+    down=1;
     stopped=0;
+    applybrakes()
+    }
+})                                                        
+document.querySelector(".brake").addEventListener("mouseup",()=>{       //TRIGGERING THE keepcalling FUNCTION ON BRAKE mouseup BUTTON
+   //up=1;
+    down=0;
+    if(gaugestop==0){
+    stopped=1;
+    startflag=1;
+    control=0;
+    keepcalling();}
+    
+})
 function applybrakes(){                                                     
     if(stopped==0){
     startflag=0;
@@ -100,6 +120,7 @@ function applybrakes(){
 }
 
 function keepcalling(){
+    if(down==0){
 fetch(`${url}?num=1&min=${a}&max=${b}&col=1&base=10&format=plain&rnd=new`)
       .then(gauge =>{
         return gauge.json();
@@ -143,3 +164,5 @@ fetch(`${url}?num=1&min=${a}&max=${b}&col=1&base=10&format=plain&rnd=new`)
     }
 })
 }
+}
+
