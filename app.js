@@ -19,7 +19,7 @@ var opts = {         //GUAGE CONFIGURATION
          
         },
     staticLabels: {
-  font: "20px sans-serif",  
+  font: "17px sans-serif",  
   labels: [0,30,60,90,120,150,180,210,240,270,300],
   color: "#000000",  
 },
