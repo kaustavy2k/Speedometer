@@ -89,7 +89,7 @@ function applybrakes(){
         return gauge.json();
     }).then(data=>{
         gauge.set(data);
-        document.querySelector(".speed").textContent=data+"KM/H";
+        document.querySelector(".speed").textContent=data+" KM/H";
         if(a<=10){
             document.querySelector(".speed").textContent="0 KM/H";
             gauge.set(0);
@@ -103,7 +103,7 @@ function applybrakes(){
    
     })
       .catch(data=>{
-       document.querySelector(".speed").textContent=data+"KM/H";
+       document.querySelector(".speed").textContent=data+" KM/H";
         if(a==30){
             a=0;
             b=0;
@@ -125,7 +125,7 @@ fetch(`${url}?num=1&min=${a}&max=${b}&col=1&base=10&format=plain&rnd=new`)
         return gauge.json();
     }).then(data=>{
         gauge.set(data);
-        document.querySelector(".speed").textContent=data+"KM/H";
+        document.querySelector(".speed").textContent=data+" KM/H";
         if(a==180){
             a=180;
             b=210;
@@ -145,7 +145,7 @@ fetch(`${url}?num=1&min=${a}&max=${b}&col=1&base=10&format=plain&rnd=new`)
     }
     })
       .catch(data=>{
-       document.querySelector(".speed").textContent=data+"KM/H";
+       document.querySelector(".speed").textContent=data+" KM/H";
         if(a==180){
             a=180;
             b=210;
