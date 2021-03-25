@@ -64,14 +64,14 @@ document.querySelector(".stop").addEventListener("click",()=>{        //SETTING 
     a=0;
     b=30;
 });
-document.querySelector(".brake").addEventListener("mousedown",()=>{        //TRIGGERING THE applybrakes FUNCTION ON BRAKE mousedown BUTTON
+document.querySelector(".brake").addEventListener("pointerdown",()=>{        //TRIGGERING THE applybrakes FUNCTION ON BRAKE mousedown BUTTON
     if(mousedownstop!=1){
     down=1;
     stopped=0;
     applybrakes()
     }
 })                                                        
-document.querySelector(".brake").addEventListener("mouseup",()=>{       //TRIGGERING THE keepcalling FUNCTION ON BRAKE mouseup BUTTON
+document.querySelector(".brake").addEventListener("pointerup",()=>{       //TRIGGERING THE keepcalling FUNCTION ON BRAKE mouseup BUTTON
     down=0;
     if(gaugestop==0){
     stopped=1;

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-    background-color: brown;
+    background-color: blue;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,13 +38,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
 }
 button {
   border-style: none;
@@ -58,15 +52,12 @@ button {
 }
 .start {
   background-color: #00e500;
-  user-select: none;
 }
 .brake {
   background-color: #ffff00;
-  user-select: none;
 }
 .stop {
   background-color: #fc0101;
-  user-select: none;
 }
 button:hover {
   cursor: pointer;
